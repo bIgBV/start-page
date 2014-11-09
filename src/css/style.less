@@ -55,7 +55,7 @@ table {
 
 /*
 * ====================================
-* CSS Reset END
+* LESS color variables
 * ====================================
 */
 
@@ -64,6 +64,23 @@ table {
 @font-family: helvetica;
 @search-color: #fafafa;
 @hover-color: rgb(80, 177, 189);
+
+/*
+* ====================================
+* LESS size scale
+* ====================================
+*/
+
+@top-spacing: @section-spacing + 5rem;
+@section-spacing: 5rem;
+@common-font-size: @section-spacing - 0.5rem;
+@common-padding: 1rem;
+
+/*
+* ====================================
+* LESS mixins
+* ====================================
+*/
 
 .border-shadow {
 	-webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
@@ -101,10 +118,10 @@ section {
 
 #time {
 	font-family: @font-family;
-	font-size: 90px;
-	margin-top: 150px;
-	margin-bottom: 50px;
-	padding: 40px 0;
+	font-size: @common-font-size;
+	margin-top: @top-spacing;
+	margin-bottom: @section-spacing;
+	padding: @common-padding 0;
 	color: @text-color;
 	.hover-transition;
 }
@@ -115,13 +132,12 @@ section {
 
 .weather {
 	font-family: @font-family;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin-bottom: @section-spacing;
 
 	.important {
-		font-size: 70px;
+		font-size: @common-font-size; 
 		color: @text-color - #111;
-		padding: 20px 20px;
+		padding: @common-padding;
 		.hover-transition;
 	}
 
@@ -139,20 +155,20 @@ section {
 		margin: 5px auto;
 
 		#search-box {
-			width: 85%;
+			width: 65%;
 			border: 0;
-			padding: 8px 15px;
-			font-size: 20px;
+			padding: 1rem 1.5rem;
+			font-size: @common-font-size/4;
 			background: rgba(255, 255, 255, 0.3);
 			color: @search-color;
 		}
 
 		#submit-button {
 			position: relative;
-			padding: 6px 15px;
-			left: -4px;
-			font-size: 20px;
-			border: 2px solid @text-color;
+			padding: 0.95rem 1.5rem;
+			left: -0.235rem;
+			font-size: @common-font-size/4;
+			border: 0.08rem solid @text-color;
 			background-color: @text-color;
 			color: @search-color;
 		}
@@ -169,19 +185,19 @@ section {
 .clearfix {
 	width: 100%;
 	margin: 0 auto;
-	padding: 10px;
+	padding: @common-padding/2;
 	text-align: center;	
 
 	#link {
 		width: 30%;
 		margin: 0 0 auto;
-		padding: 10px 10px;
+		padding: @common-padding/2;
 		float: left;
 
 		a {
 			font-family: @font-family;
 			text-decoration: none;
-			font-size: 30px;
+			font-size: @common-font-size/4;
 			color: @text-color;
 			.hover-transition;
 		}
