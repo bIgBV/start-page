@@ -1,0 +1,7 @@
+.bowerrc
+# Ignore distribution files
+dist/
+# Ignore library flies
+node_modules/
+src/_lib/
+*.log
