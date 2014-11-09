@@ -13,7 +13,8 @@ module.exports = function (grunt) {
 		// all of our configs go here
 		jshint: {
 			options: {
-				reporter: require('jshint-stylish') // using jshint-stylish to make errors look soo very good
+				// using jshint-stylish to make errors look soo very good
+				reporter: require('jshint-stylish') 
 			},
 
 			// once this task is run, lint the Gruntfile and all js files in src
