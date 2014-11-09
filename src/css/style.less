@@ -1,0 +1,198 @@
+/*
+* ====================================
+* CSS Reset
+* ====================================
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+* ====================================
+* CSS Reset END
+* ====================================
+*/
+
+@section-background: rgba(55, 75, 84, 0.35);
+@text-color : rgb(86, 116, 119);
+@font-family: helvetica;
+@search-color: #fafafa;
+@hover-color: rgb(80, 177, 189);
+
+.border-shadow {
+	-webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
+}
+
+.hover-transition {
+	-o-transition: color 0.5s;
+	-ms-transition: color 0.5s;
+	-mox-transition: color 0.5s;
+	-webkit-transition: color 0.5s;
+	transition: color 0.5;
+}
+
+body{
+	background: url(img/background2.png);
+	background-repeat: no-repeat;
+}
+
+.container {
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+section {
+	width: 60%;
+	text-align: center;
+	margin: 0 auto;
+	background: @section-background;
+	.border-shadow;
+}
+
+#time {
+	font-family: @font-family;
+	font-size: 90px;
+	margin-top: 150px;
+	margin-bottom: 50px;
+	padding: 40px 0;
+	color: @text-color;
+	.hover-transition;
+}
+
+#time:hover {
+	color : @hover-color;
+}
+
+.weather {
+	font-family: @font-family;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	.important {
+		font-size: 70px;
+		color: @text-color - #111;
+		padding: 20px 20px;
+		.hover-transition;
+	}
+
+	.important:hover {
+		color: @hover-color;
+	}
+}
+
+.search {
+	padding: 20px;
+	margin-bottom: 50px;
+
+	form {
+		width: 90%;
+		margin: 5px auto;
+
+		#search-box {
+			width: 85%;
+			border: 0;
+			padding: 8px 15px;
+			font-size: 20px;
+			background: rgba(255, 255, 255, 0.3);
+			color: @search-color;
+		}
+
+		#submit-button {
+			position: relative;
+			padding: 6px 15px;
+			left: -4px;
+			font-size: 20px;
+			border: 2px solid @text-color;
+			background-color: @text-color;
+			color: @search-color;
+		}
+	}
+}
+
+.clearfix:after {
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.clearfix {
+	width: 100%;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;	
+
+	#link {
+		width: 30%;
+		margin: 0 0 auto;
+		padding: 10px 10px;
+		float: left;
+
+		a {
+			font-family: @font-family;
+			text-decoration: none;
+			font-size: 30px;
+			color: @text-color;
+			.hover-transition;
+		}
+
+		a:visited {
+			text-decoration: none;
+			color: @text-color;
+		}
+
+		a:hover {
+			color: @hover-color;
+		}
+	}
+}

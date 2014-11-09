@@ -1,0 +1,30 @@
+{
+  "name": "startpage",
+  "version": "0.1.0",
+  "authors": [
+    "bIgBV <bhargav.v2@gmail.com>"
+  ],
+  "description": "Sample applciation for a startpage",
+  "main": "src/index.html",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals"
+  ],
+  "keywords": [
+    "startpage",
+    "bower"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}

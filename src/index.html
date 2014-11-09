@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StartPage</title>
+    <link rel="stylesheet" href="css/flaticons/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="">
+    <section class="time-weather">
+        <div id="time"></div>
+    </section>
+    <section>
+        <div class="weather">
+            <div class="important">
+                <span id="temp"></span>&deg;C
+                <span id="condition"></span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="search">
+            <form action="http://www.google.com/search" method="get">
+                <input type="text" id="search-box" name="q" placeholder="Search">
+                <input type="submit" id="submit-button" name="button" value="Search">
+            </form>
+        </div>
+    </section>
+    <section>
+        <div class="clearfix">
+            <div id="link">
+                <a href="http://www.reddit.com" target="_blank"> 
+                     Reddit
+                </a>
+            </div>
+            <div id="link">
+                <a href="http://www.facebook.com" target="_blank"> 
+                     Facebook
+                </a>
+            </div>
+            <div id="link">
+                <a href="http://www.github.com" target="_blank">
+                     Github
+                </a>
+            </div>
+            <div id="link">
+                <a href="http://www.youtube.com" target="_blank">
+                     Youtube
+                </a>
+            </div>
+            <div id="link">
+                <a href="http://news.ycombinator.com" target="_blank">
+                     HackerNews
+                </a>
+            </div>
+            <div id="link">
+                <a href="http://mail.google.com">
+                     Gmail
+                </a>
+            </div>
+        </div>
+    </section>
+    <script src="js/lib.min.js"></script>
+    <script src="js/time-weather.min.js"></script>
+</body>
+</html>
