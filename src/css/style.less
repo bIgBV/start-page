@@ -22,46 +22,49 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /*
 * ====================================
-* LESS color variables
+* LESS variables
 * ====================================
 */
 
-@section-background: rgba(55, 75, 84, 0.35);
-@text-color : rgb(86, 116, 119);
-@font-family: helvetica;
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+@background-color: #455A64;
+@section-background: rgba(255, 255, 255, 1);
+@text-color: rgba(0, 0, 0, 0.9);
+@font-family: 'Roboto', sans-serif;
 @search-color: #fafafa;
 @hover-color: rgb(80, 177, 189);
 
@@ -73,7 +76,7 @@ table {
 
 @top-spacing: @section-spacing + 5rem;
 @section-spacing: 5rem;
-@common-font-size: @section-spacing - 0.5rem;
+@common-font-size: @section-spacing - 1rem;
 @common-padding: 1rem;
 
 /*
@@ -83,132 +86,143 @@ table {
 */
 
 .border-shadow {
-	-webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow : 0px 5px 20px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.75);
 }
 
-.hover-transition {
-	-o-transition: color 0.5s;
-	-ms-transition: color 0.5s;
-	-mox-transition: color 0.5s;
-	-webkit-transition: color 0.5s;
-	transition: color 0.5;
+.hover-transition(@transition-property) {
+    -o-transition: @transition-property 0.5s;
+    -ms-transition: @transition-property 0.5s;
+    -mox-transition: @transition-property 0.5s;
+    -webkit-transition: @transition-property 0.5s;
+    transition: @transition-property 0.5;
 }
 
 body{
-	background: url(img/background2.png);
-	background-repeat: no-repeat;
+    background: @background-color;
+    background-repeat: no-repeat;
 }
 
 .container {
-	height: 100vh;
-	margin: 0;
-	padding: 0;
-	border: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 section {
-	width: 60%;
-	text-align: center;
-	margin: 0 auto;
-	background: @section-background;
-	.border-shadow;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    background: @section-background;
+    .border-shadow;
 }
 
 #time {
-	font-family: @font-family;
-	font-size: @common-font-size;
-	margin-top: @top-spacing;
-	margin-bottom: @section-spacing;
-	padding: @common-padding 0;
-	color: @text-color;
-	.hover-transition;
+    font-family: @font-family;
+    font-size: @common-font-size;
+    margin-top: @section-spacing;
+    margin-bottom: @section-spacing;
+    padding: @common-padding 0;
+    color: @text-color;
+    .hover-transition(color);
 }
 
 #time:hover {
-	color : @hover-color;
+    color : @hover-color;
 }
 
 .weather {
-	font-family: @font-family;
-	margin-bottom: @section-spacing;
+    font-family: @font-family;
+    margin-bottom: @section-spacing;
 
-	.important {
-		font-size: @common-font-size; 
-		color: @text-color - #111;
-		padding: @common-padding;
-		.hover-transition;
-	}
+    .weather-data {
+        font-size: @common-font-size; 
+        color: @text-color - #111;
+        padding: @common-padding;
+        .hover-transition(color);
+    }
 
-	.important:hover {
-		color: @hover-color;
-	}
+    .weather-data:hover {
+        color: @hover-color;
+    }
 }
 
 .search {
-	padding: 20px;
-	margin-bottom: 50px;
+    padding: 20px;
+    margin-bottom: 50px;
 
-	form {
-		width: 90%;
-		margin: 5px auto;
+    form {
+        width: 90%;
+        margin: 5px auto;
 
-		#search-box {
-			width: 65%;
-			border: 0;
-			padding: 1rem 1.5rem;
-			font-size: @common-font-size/4;
-			background: rgba(255, 255, 255, 0.3);
-			color: @search-color;
-		}
+        #search-box {
+            width: 65%;
+            border: 0;
+            padding: 1rem 1.5rem;
+            font-size: @common-font-size/4;
+            background: rgba(255, 255, 255, 0.3);
+            color: @text-color;
+        }
 
-		#submit-button {
-			position: relative;
-			padding: 0.95rem 1.5rem;
-			left: -0.235rem;
-			font-size: @common-font-size/4;
-			border: 0.08rem solid @text-color;
-			background-color: @text-color;
-			color: @search-color;
-		}
-	}
+        #search-box:focus {
+            outline : none;
+        }
+
+        #submit-button {
+            position: relative;
+            padding: 0.95rem 1.5rem;
+            left: -0.235rem;
+            font-size: @common-font-size/4;
+            border: 0.08rem solid @text-color;
+            background-color: @text-color;
+            color: @search-color;
+            .hover-transition(box-shadow);
+        }
+
+        #submit-button:hover {
+            .border-shadow();
+        }
+    }
 }
 
+// Clearfix hack for grid items to align properly
 .clearfix:after {
-	content: " ";
-	display: block;
-	height: 0;
-	clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
 }
 
-.clearfix {
-	width: 100%;
-	margin: 0 auto;
-	padding: @common-padding/2;
-	text-align: center;	
+.links-table {
+    width: 100%;
+    margin: 0 auto;
+    padding: @common-padding/2;
+    margin-bottom: 50px;
+    text-align: center; 
 
-	#link {
-		width: 30%;
-		margin: 0 0 auto;
-		padding: @common-padding/2;
-		float: left;
+    #link {
+        width: 30%;
+        margin: 0 0 auto;
+        padding: @common-padding/2;
+        float: left;
 
-		a {
-			font-family: @font-family;
-			text-decoration: none;
-			font-size: @common-font-size/4;
-			color: @text-color;
-			.hover-transition;
-		}
+        a {
+            font-family: @font-family;
+            text-decoration: none;
+            font-size: @common-font-size/4;
+            color: @text-color;
+            .hover-transition(color);
+        }
 
-		a:visited {
-			text-decoration: none;
-			color: @text-color;
-		}
+        a:visited {
+            text-decoration: none;
+            color: @text-color;
+        }
 
-		a:hover {
-			color: @hover-color;
-		}
-	}
+        a:hover {
+            color: @hover-color;
+        }
+    }
 }

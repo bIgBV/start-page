@@ -19,7 +19,7 @@ function setTime() {
 
 function showWeather () {
     getWeather();
-    var weatherTimerID = setInterval(function () {getWeather();}, 60000);
+    var weatherTimerID = setInterval(function () {getWeather();}, 360000);
 }
 
 
