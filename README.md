@@ -6,7 +6,7 @@ These are the node modules which are required
 * bower
 
 # Installation 
-To install simply run `npm install` and `bower install` to install the required packages and run `grunt` to run it's default tasks.
+To install clone this repo and run `npm install` and `bower install` to install the required packages and run `grunt` to run it's default tasks.
 
 At it's current state it:
 
