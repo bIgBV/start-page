@@ -46,8 +46,8 @@ module.exports = function (grunt) {
 
 		copy: {
 			main: {
-				src: ['src/css/img/**'],
-				dest: 'dist/css/img/',
+				src: ['src/index.html'],
+				dest: 'dist/',
 				expand: true,
 				flatten: true
 			},
@@ -67,7 +67,7 @@ module.exports = function (grunt) {
 				tasks: ['jshint', 'uglify']
 			},
 
-			// html files
+			// Copying index.html over to the dist folder
 			html: {
 				files: 'src/index.html',
 				tasks: ['copy']

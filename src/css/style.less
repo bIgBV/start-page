@@ -61,12 +61,13 @@ table {
 
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
-@background-color: #455A64;
-@section-background: rgba(255, 255, 255, 1);
-@text-color: rgba(0, 0, 0, 0.9);
-@font-family: 'Roboto', sans-serif;
-@search-color: #fafafa;
-@hover-color: rgb(80, 177, 189);
+@background-color:          #455A64;
+@section-background:        #FFFFFF;
+@text-color:                rgba(0, 0, 0, 0.9);
+@search-color:              #fafafa;
+@hover-color:               rgb(80, 177, 189);
+
+@font-family:               'Roboto', sans-serif;
 
 /*
 * ====================================
@@ -74,10 +75,10 @@ table {
 * ====================================
 */
 
-@top-spacing: @section-spacing + 5rem;
-@section-spacing: 5rem;
-@common-font-size: @section-spacing - 1rem;
-@common-padding: 1rem;
+@section-spacing:           5rem;
+@common-padding:            1rem;
+@top-spacing:               @section-spacing + 5rem;
+@common-font-size:          @section-spacing - 1rem;
 
 /*
 * ====================================
@@ -86,17 +87,17 @@ table {
 */
 
 .border-shadow {
-    -moz-box-shadow : 0px 5px 20px 2px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow :       0px 5px 20px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow:     0px 5px 20px 2px rgba(0, 0, 0, 0.75);
+    box-shadow:             0px 5px 20px 2px rgba(0, 0, 0, 0.75);
 }
 
 .hover-transition(@transition-property) {
-    -o-transition: @transition-property 0.5s;
-    -ms-transition: @transition-property 0.5s;
-    -mox-transition: @transition-property 0.5s;
-    -webkit-transition: @transition-property 0.5s;
-    transition: @transition-property 0.5;
+    -o-transition:          @transition-property 0.5s;
+    -ms-transition:         @transition-property 0.5s;
+    -mox-transition:        @transition-property 0.5s;
+    -webkit-transition:     @transition-property 0.5s;
+    transition:             @transition-property 0.5;
 }
 
 body{
